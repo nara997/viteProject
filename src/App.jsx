@@ -6,6 +6,8 @@ const GET_SUBJECTS = gql`
     messages{
           items{
                  subject
+                 id
+                 body
                 }       
               
               }
@@ -27,7 +29,13 @@ export default function App() {
       <h2 class="App-header">🦒My first Apollo app 🚀</h2>
       <div class="card">
       
-        {data.messages.items.map(eachMessage =>(<h3 class="App-link">=>{eachMessage.subject}</h3>))}
+        {
+        data.messages.items.map(eachMessage =>(
+        <div className="semi-card">
+        <p>id:{eachMessage.id}</p>
+        <h3 class="App-link">subject:{eachMessage.subject}</h3>
+        <h4>body:{eachMessage.body}</h4>
+        </div>))}
         </div>
     </div>
   );
