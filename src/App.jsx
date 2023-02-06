@@ -34,7 +34,7 @@ export default function App() {
         <div className="semi-card">
         <p>id:{eachMessage.id}</p>
         <h3 class="App-link">subject:{eachMessage.subject}</h3>
-        <h4>body:{eachMessage.body}</h4>
+        <h4 col="15">body:{eachMessage.body}</h4>
         </div>))}
         </div>
     </div>
